@@ -5,17 +5,26 @@ import GifList from './gif_list.jsx'
 import SearchBar from './search_bar.jsx'
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      gifs: [],
+      selectedGifId: "mI5iY1NWUXaLolhxIQ"
+    }
+  }
+
   render() {
     return (
       <div>
         <div className="left-scene">
           <SearchBar />
           <div className="selected-gif">
-            <Gif />
+            <Gif id={this.state.selectedGifId} />
           </div>
         </div>
         <div className="right-scene">
-          <GifList />
+          <GifList gifs={this.state.gifs} />
         </div>
       </div>
     )
