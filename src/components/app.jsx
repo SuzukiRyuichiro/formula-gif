@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import giphy from 'giphy-api';
-
+// Components
 import Gif from './gif.jsx'
 import GifList from './gif_list.jsx'
 import SearchBar from './search_bar.jsx'
+import CopyButton from './copy_button.jsx'
 
 class App extends Component {
   constructor(props) {
@@ -40,6 +41,7 @@ class App extends Component {
         <div className="left-scene">
           <SearchBar search={this.search}/>
           <div className="selected-gif">
+            <CopyButton />
             <Gif id={this.state.selectedGifId} />
           </div>
         </div>
