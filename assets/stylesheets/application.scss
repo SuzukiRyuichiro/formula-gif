@@ -36,8 +36,12 @@
     flex-grow: 1;
     height: calc(100vh - 232px);
     background-image: url("https://www.scienceandaerospace.blog/wp-content/uploads/2019/12/f1_logo.jpg");
-    background-size: 40% 30%;
+    background-size: 200px;
     position: relative;
+
+    img {
+      box-shadow: 0px 0px 20px #ee110080;
+    }
 
     .copy-button {
       position: absolute;
@@ -67,6 +71,11 @@
       width: 100%;
       margin: 5px;
       cursor: pointer;
+      transition: transform .1s;
+
+      &:hover {
+        transform: scale(1.05)
+      }
     }
   }
 }
