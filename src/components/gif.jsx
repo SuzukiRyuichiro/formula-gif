@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 
 class Gif extends Component{
+  shouldComponentUpdate(nextProps, nextState) {
+    return nextProps.id !== this.props.id;
+  }
+
   render () {
     const src = `https://media.giphy.com/media/${this.props.id}/giphy.gif`
     return (

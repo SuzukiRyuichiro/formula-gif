@@ -14,14 +14,14 @@ class App extends Component {
       gifs: [],
       selectedGifId: "mI5iY1NWUXaLolhxIQ"
     }
-    this.search('Formula 1');
+    this.search('Funny Formula 1');
   }
 
   search = (query) => {
     giphy('Fw5CmD3tNzQtabybd5mvQg3gOa8t0OdK').search({
       q: query,
       rating: 'g',
-      limit: 15
+      limit: 20
     }, (err, result) => {
       this.setState({
         gifs: result.data
